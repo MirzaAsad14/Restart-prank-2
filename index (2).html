@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>System Restart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#container {
+  text-align: center;
+}
+
+.logo {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.loader {
+  border: 5px solid #222;
+  border-top: 5px solid #0f0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.text {
+  margin-top: 20px;
+  font-size: 16px;
+  opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+  <div class="logo">ANDROID</div>
+  <div class="loader"></div>
+  <div class="text" id="text">Restarting...</div>
+</div>
+
+<script>
+let messages = [
+  "Restarting...",
+  "Shutting down system",
+  "Applying updates",
+  "Optimizing apps (1
